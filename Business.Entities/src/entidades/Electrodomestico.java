@@ -4,13 +4,47 @@ public class Electrodomestico {
 	//variables de clase
 	static final double defaultPrecioBase=100;
 	static final float defaultPeso=5;
-	static final Color defaultColor = new Color("blanco");
-	static final ConsumoEnergetico defaultConsumo = new ConsumoEnergetico('F');
+	static final String defaultColor = "blanco";
+	static final char defaultConsumo ='F';
+	
 	// variables de instancia
 	protected double precioBase;
 	protected float peso;
-	protected Color color;
-	protected ConsumoEnergetico consumoEnergetico;
+	protected String color;
+	protected char consumoEnergetico;
+	public double getPrecioBase() {
+		return precioBase;
+	}
+
+	public float getPeso() {
+		return peso;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public char getConsumoEnergetico() {
+		return consumoEnergetico;
+	}
+
+	public void setPrecioBase(double precioBase) {
+		this.precioBase = precioBase;
+	}
+
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public void setConsumoEnergetico(char consumoEnergetico) {
+		this.consumoEnergetico = consumoEnergetico;
+	}
+
+	
 	
 	public Electrodomestico() {
 		this.precioBase = Electrodomestico.defaultPrecioBase;
@@ -31,13 +65,13 @@ public class Electrodomestico {
 		this.precioBase = precioBase;
 		this.peso = peso;
 		if (this.comprobarColor(color)) {
-			this.color = new Color(color);
+			this.color = color;
 		}
 		else {
 			this.color = Electrodomestico.defaultColor;
 		}
 		if (this.comprobarConsumoEnergetico(consumoEnergetico)) {
-			this.consumoEnergetico = new ConsumoEnergetico(consumoEnergetico);
+			this.consumoEnergetico = consumoEnergetico;
 		}
 		else {
 			this.consumoEnergetico = Electrodomestico.defaultConsumo;
@@ -66,6 +100,8 @@ public class Electrodomestico {
 			return false;
 		}
 	}
+	
+
 
 
 }
