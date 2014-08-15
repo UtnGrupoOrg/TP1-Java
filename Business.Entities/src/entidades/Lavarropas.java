@@ -34,7 +34,7 @@ public class Lavarropas extends Electrodomestico {
 		return carga;
 	}
 	
-//falta preciofinal
+	
 
 	
 }
