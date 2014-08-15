@@ -12,6 +12,8 @@ public class Electrodomestico {
 	protected float peso;
 	protected String color;
 	protected char consumoEnergetico;
+	
+	//Metodos
 	public double getPrecioBase() {
 		return precioBase;
 	}
@@ -44,7 +46,6 @@ public class Electrodomestico {
 		this.consumoEnergetico = consumoEnergetico;
 	}
 
-	
 	
 	public Electrodomestico() {
 		this.precioBase = Electrodomestico.defaultPrecioBase;
