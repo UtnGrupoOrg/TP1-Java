@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 import entidades.*;
 
-public class PreciosPorConsumoEnergetico {
+public class ConsumoEnergeticoAdapter {
 	
 	
 
-	private static  ArrayList<ConsumoEnergetico> listaPrecios = inicializaLista();
+	private static  ArrayList<ConsumoEnergetico> consumosEnergeticos = inicializaLista();
 
 	private static ArrayList<ConsumoEnergetico> inicializaLista() {
 		ArrayList<ConsumoEnergetico> lista = new ArrayList<ConsumoEnergetico>();
@@ -23,7 +23,13 @@ public class PreciosPorConsumoEnergetico {
 	}
 
 	
+	public ConsumoEnergeticoAdapter() {
+		
+	}
+	
+	public ArrayList<ConsumoEnergetico> getAll() {
+		return ConsumoEnergeticoAdapter.consumosEnergeticos;
+	}
 	
 	
-
 }
