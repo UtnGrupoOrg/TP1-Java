@@ -3,7 +3,8 @@ package entidades;
 public class Lavarropas extends Electrodomestico {
 	//variable de clase. Elementos por defecto
 	static final float defaultCarga=5;
-	//atributos
+	
+	//atributo
 	private float carga;
 	
 	public Lavarropas()
@@ -34,6 +35,12 @@ public class Lavarropas extends Electrodomestico {
 		return carga;
 	}
 	
+	public void precioFinal()
+	{
+		if (this.carga>30) {
+			this.precioBase=this.getPrecioBase()+50;		
+		}
+	}
 	
 
 	
