@@ -85,6 +85,14 @@ public class Electrodomestico {
 			return false;
 		}
 	}
+
+	public boolean perteneceArango(double precioDesde, double precioHasta) {
+		double precio = this.precioFinal();
+		if (precio>precioDesde && precio<precioHasta) {
+			return true;
+		}
+		else return false;
+	}
 	
 
 
