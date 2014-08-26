@@ -35,11 +35,13 @@ public class Lavarropas extends Electrodomestico {
 		return carga;
 	}
 	
-	public void precioFinal()
+	public double precioFinal()
 	{
+		double precio = super.precioFinal();
 		if (this.carga>30) {
-			this.precioBase=this.getPrecioBase()+50;		
+			precio += 30;
 		}
+		return precio;
 	}
 	
 
