@@ -16,6 +16,10 @@ public class Lavarropas extends Electrodomestico {
 		this.precioBase=defaultPrecioBase;
 	}
 	
+	public String toString() {
+		return "Lavarropas";
+	}
+	
 	public Lavarropas(double precio, float peso)
 	{
 		this.carga=defaultCarga;

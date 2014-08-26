@@ -16,7 +16,31 @@ public class Electrodomestico {
 	protected ConsumoEnergetico consumoEnergetico;
 	private ArrayList<Peso_Precio> preciosPorPeso;
 	
+	
 	//Metodos
+	
+	public String toString() {
+		return "Electrodomestico";
+	}
+	
+	public void setPrecioBase(double precioBase) {
+		this.precioBase = precioBase;
+	}
+
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+
+	public void setColor(Color color) {
+		this.color = color;
+	}
+
+	public void setConsumoEnergetico(ConsumoEnergetico consumoEnergetico) {
+		this.consumoEnergetico = consumoEnergetico;
+	}
+
+	
+	
 	public double getPrecioBase() {
 		return precioBase;
 	}

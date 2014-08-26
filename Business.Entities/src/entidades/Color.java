@@ -16,4 +16,8 @@ public class Color {
 		this.color=color;
 	}
 	
+	public String toString() {
+		return this.getColor();
+	}
+	
 }

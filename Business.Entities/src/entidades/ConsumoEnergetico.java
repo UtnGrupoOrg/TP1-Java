@@ -15,7 +15,9 @@ public class ConsumoEnergetico{
 		this.precio = precio;
 	}
 	
-
+	public String toString() {
+		return Character.toString(this.getLetra());
+	}
 	
 	
 	
