@@ -43,7 +43,7 @@ public class Lavarropas extends Electrodomestico {
 	{
 		double precio = super.precioFinal();
 		if (this.carga>30) {
-			precio += 30;
+			precio += 50;
 		}
 		return precio;
 	}
