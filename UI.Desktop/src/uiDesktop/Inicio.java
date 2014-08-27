@@ -1,6 +1,7 @@
 package uiDesktop;
 
 
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 
@@ -17,7 +18,9 @@ import javax.swing.table.TableModel;
 
 
 
+
 import util.MyTableModel;
+
 
 
 
@@ -28,10 +31,12 @@ import java.awt.event.ComponentEvent;
 
 import logicaNegocio.ElectrodomesticoLogic;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 public class Inicio {
 
 	private JFrame frame;
-	
 	private ElectrodomesticoLogic controlador;
 	private JScrollPane scrollPane;
 	private TableModel tableModel;
@@ -55,7 +60,6 @@ public class Inicio {
 	
 	 */
 	public Inicio() {
-		
 		controlador = new ElectrodomesticoLogic();
 		tableModel = new MyTableModel(controlador.getAll());
 		initialize();
@@ -101,6 +105,15 @@ public class Inicio {
 		
 		
 		JButton btnAgregar = new JButton("Agregar");
+		btnAgregar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+			
+				JDialog alta=new AltaElectrodomestico(frame);
+				alta.setLocationRelativeTo(null);
+				alta.setVisible(true);
+			}
+		});
 		btnAgregar.setBounds(32, 237, 89, 23);
 		frame.getContentPane().add(btnAgregar);
 		
