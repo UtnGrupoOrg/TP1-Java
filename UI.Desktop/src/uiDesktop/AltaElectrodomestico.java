@@ -33,6 +33,7 @@ public class AltaElectrodomestico extends JDialog {
 	private JTextField txtResolucion;
 	private JPanel pTelevisor;
 	private JCheckBox cbSintonizador;
+	private JComboBox cbxConsumoEnergetico;
 	/*
 	public static void main(String[] args) {
 		try {
@@ -49,6 +50,7 @@ public class AltaElectrodomestico extends JDialog {
 		super(frame);
 		this.setLocationRelativeTo(frame);
 		this.setModal(true);
+		this.setTitle("Alta Electrodomestico");
 		setBounds(100, 100, 556, 396);
 		getContentPane().setLayout(new BorderLayout());
 		pGeneral.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -98,7 +100,7 @@ public class AltaElectrodomestico extends JDialog {
 	}
 		});
 		cbxElectrodomestico.setFont(new Font("Arial", Font.PLAIN, 13));
-		this.inicia();
+		
 		
 		
 		
@@ -118,7 +120,7 @@ public class AltaElectrodomestico extends JDialog {
 		
 		cbxColor = new JComboBox();
 		
-		JComboBox cbxConsumoEnergetico = new JComboBox();
+		cbxConsumoEnergetico = new JComboBox();
 		
 		pTelevisor = new JPanel();
 		pTelevisor.setVisible(false);
@@ -285,12 +287,31 @@ public class AltaElectrodomestico extends JDialog {
 				btnCancelar.setActionCommand("Cancel");
 				buttonPane.add(btnCancelar);
 			}
+			this.iniciaCombos();
 		}
 	}
-	public void inicia()
+	public void iniciaCombos()
 	{
 		this.cbxElectrodomestico.addItem("");
 		this.cbxElectrodomestico.addItem("Lavarropas");
 		this.cbxElectrodomestico.addItem("Televisor");
+		
+		this.cbxColor.addItem("");
+		this.cbxColor.addItem("blanco");
+		this.cbxColor.addItem("negro");
+		this.cbxColor.addItem("rojo");
+		this.cbxColor.addItem("azul");
+		this.cbxColor.addItem("gris");
+		
+		this.cbxConsumoEnergetico.addItem("");
+		this.cbxConsumoEnergetico.addItem("A");
+		this.cbxConsumoEnergetico.addItem("B");
+		this.cbxConsumoEnergetico.addItem("C");
+		this.cbxConsumoEnergetico.addItem("D");
+		this.cbxConsumoEnergetico.addItem("E");
+		this.cbxConsumoEnergetico.addItem("F");
+
+
+		
 	}
 }
