@@ -27,8 +27,6 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 
 import logicaNegocio.ElectrodomesticoLogic;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class Inicio {
 
@@ -61,6 +59,9 @@ public class Inicio {
 		controlador = new ElectrodomesticoLogic();
 		tableModel = new MyTableModel(controlador.getAll());
 		initialize();
+		
+		
+		
 		
 	}
 	
@@ -100,12 +101,6 @@ public class Inicio {
 		
 		
 		JButton btnAgregar = new JButton("Agregar");
-		btnAgregar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				AltaElectrodomestico alta=new AltaElectrodomestico();
-				alta.show();
-			}
-		});
 		btnAgregar.setBounds(32, 237, 89, 23);
 		frame.getContentPane().add(btnAgregar);
 		
